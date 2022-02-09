@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "5ab1111a-0127-4d75-8bd8-44282d116172",
+		"name": "HR Portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Leave Management",
+			"item": [
+				{
+					"name": "Withdraw Leave",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\":300,\n    \"leaveId\":\"3119ea72-bc69-426a-8b8e-a56c81340c8e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/leaveManagement/withdrawLeaveRequest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"leaveManagement",
+								"withdrawLeaveRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Employee Leave Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\":300\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/leaveManagement/getLeaveData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"leaveManagement",
+								"getLeaveData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Manager Leave Data Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\":200\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/leaveManagement/getLeaveDataByManager",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"leaveManagement",
+								"getLeaveDataByManager"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Leave Status By Manager",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\":200,\n    \"leaveId\":\"22ff80e9-f089-435d-9b88-41fb6787e293\",\n    \"leaveStatus\": \"GRANTED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/leaveManagement/updateLeaveStatusByManager",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"leaveManagement",
+								"updateLeaveStatusByManager"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply Leave",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\":301,\n    \"type\":\"SICK_LEAVE\",\n    \"startDate\":\"2022-02-09\",\n    \"endDate\":\"2022-02-11\",\n    \"reason\":\"Fever\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/leaveManagement/applyLeave",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"leaveManagement",
+								"applyLeave"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
